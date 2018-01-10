@@ -1580,8 +1580,8 @@ Spring Securityの詳細については \ :doc:`../../Security/Authentication`\ 
                 <c:forEach var="scope" items="${scopes}">  <!-- (2) -->
                     <li>
                         ${f:h(scope.key)}
-                        <input type="radio" name="${f:h(scope.key)}" value="true"/><label for="${f:h(scope.key)}">Approve</label>
-                        <input type="radio" name="${f:h(scope.key)}" value="false"/><label for="${f:h(scope.key)}">Deny</label>
+                        <input type="radio" name="${f:h(scope.key)}" id="${f:h(scope.key)}_approve" value="true"/><label for="${f:h(scope.key)}_approve">Approve</label>
+                        <input type="radio" name="${f:h(scope.key)}" id="${f:h(scope.key)}_deny" value="false"/><label for="${f:h(scope.key)}_deny">Deny</label>
                     </li>
                 </c:forEach>
                 <input name="user_oauth_approval" value="true" type="hidden"/>  <!-- (3) -->
